@@ -1,0 +1,338 @@
+digraph MyFir {
+stylesheet = "styles.css"
+rankdir="LR" 
+
+subgraph cluster_MyFir {
+  label="MyFir"
+  URL=""
+  bgcolor="#FFF8DC"
+  cluster_MyFir_clock [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="clock" rank="0"]
+     
+cluster_MyFir_reset [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="reset" rank="0"]
+     
+cluster_MyFir_io_in [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="io_in" rank="0"]
+     
+cluster_MyFir_io_out [shape = "rectangle" style="filled" fillcolor="#E0FFFF" label="io_out" rank="1000"]
+     
+struct_cluster_MyFir_REG [shape="plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#FFE4B5">
+  <TR>
+    <TD PORT="in">&#x25cf;</TD>
+    <TD>REG</TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+struct_cluster_MyFir_REG_1 [shape="plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#FFE4B5">
+  <TR>
+    <TD PORT="in">&#x25cf;</TD>
+    <TD>REG_1</TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+struct_cluster_MyFir_REG_2 [shape="plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#FFE4B5">
+  <TR>
+    <TD PORT="in">&#x25cf;</TD>
+    <TD>REG_2</TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+struct_cluster_MyFir_REG_3 [shape="plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#FFE4B5">
+  <TR>
+    <TD PORT="in">&#x25cf;</TD>
+    <TD>REG_3</TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+struct_cluster_MyFir_REG_4 [shape="plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#FFE4B5">
+  <TR>
+    <TD PORT="in">&#x25cf;</TD>
+    <TD>REG_4</TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+struct_cluster_MyFir_REG_5 [shape="plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#FFE4B5">
+  <TR>
+    <TD PORT="in">&#x25cf;</TD>
+    <TD>REG_5</TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+cluster_MyFir_mults_0 [label = "mults_0" shape="rectangle"]; 
+
+op_mul_1 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > mul </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">0</TD>
+  </TR>
+</TABLE>>];
+       
+cluster_MyFir_mults_1 [label = "mults_1" shape="rectangle"]; 
+
+op_mul_2 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > mul </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">1365</TD>
+  </TR>
+</TABLE>>];
+       
+cluster_MyFir_mults_2 [label = "mults_2" shape="rectangle"]; 
+
+op_mul_3 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > mul </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">2731</TD>
+  </TR>
+</TABLE>>];
+       
+cluster_MyFir_mults_3 [label = "mults_3" shape="rectangle"]; 
+
+op_mul_4 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > mul </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">4096</TD>
+  </TR>
+</TABLE>>];
+       
+cluster_MyFir_mults_4 [label = "mults_4" shape="rectangle"]; 
+
+op_mul_5 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > mul </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">2731</TD>
+  </TR>
+</TABLE>>];
+       
+cluster_MyFir_mults_5 [label = "mults_5" shape="rectangle"]; 
+
+op_mul_6 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > mul </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">1365</TD>
+  </TR>
+</TABLE>>];
+       
+cluster_MyFir_mults_6 [label = "mults_6" shape="rectangle"]; 
+
+op_mul_7 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > mul </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">0</TD>
+  </TR>
+</TABLE>>];
+       
+cluster_MyFir__T [label = "_T" shape="rectangle"]; 
+
+op_add_8 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > add </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_pad_9 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD > pad </TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+cluster_MyFir_result [label = "result" shape="rectangle"]; 
+
+op_add_10 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > add </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_add_11 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > add </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_add_12 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > add </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_add_13 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > add </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_add_14 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > add </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_pad_15 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD > pad </TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_pad_16 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD > pad </TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_pad_17 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD > pad </TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_pad_18 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD > pad </TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+  struct_cluster_MyFir_REG_5:out -> op_mul_7:in1
+  op_pad_9:out -> op_add_8:in1
+  op_add_8:out -> cluster_MyFir__T
+  op_mul_1:out -> cluster_MyFir_mults_0
+  op_pad_16:out -> op_add_11:in2
+  op_mul_4:out -> cluster_MyFir_mults_3
+  op_mul_7:out -> cluster_MyFir_mults_6
+  op_add_11:out -> op_add_10:in1
+  struct_cluster_MyFir_REG_4:out -> struct_cluster_MyFir_REG_5:in
+  struct_cluster_MyFir_REG:out -> struct_cluster_MyFir_REG_1:in
+  cluster_MyFir__T -> op_add_14:in1
+  op_pad_15:out -> op_add_12:in2
+  struct_cluster_MyFir_REG_2:out -> struct_cluster_MyFir_REG_3:in
+  cluster_MyFir_mults_4 -> op_pad_15:in1
+  op_add_12:out -> op_add_11:in1
+  struct_cluster_MyFir_REG_2:out -> op_mul_4:in1
+  cluster_MyFir_mults_5 -> op_pad_16:in1
+  op_mul_3:out -> cluster_MyFir_mults_2
+  cluster_MyFir_mults_3 -> op_add_13:in2
+  op_mul_6:out -> cluster_MyFir_mults_5
+  cluster_MyFir_io_in -> op_mul_1:in1
+  op_add_13:out -> op_add_12:in1
+  struct_cluster_MyFir_REG_3:out -> op_mul_5:in1
+  cluster_MyFir_mults_0 -> op_pad_9:in1
+  cluster_MyFir_mults_6 -> op_pad_17:in1
+  cluster_MyFir_mults_1 -> op_add_8:in2
+  struct_cluster_MyFir_REG_3:out -> struct_cluster_MyFir_REG_4:in
+  struct_cluster_MyFir_REG_4:out -> op_mul_6:in1
+  struct_cluster_MyFir_REG_1:out -> struct_cluster_MyFir_REG_2:in
+  op_pad_18:out -> cluster_MyFir_io_out
+  op_mul_5:out -> cluster_MyFir_mults_4
+  op_pad_17:out -> op_add_10:in2
+  op_mul_2:out -> cluster_MyFir_mults_1
+  struct_cluster_MyFir_REG:out -> op_mul_2:in1
+  cluster_MyFir_mults_2 -> op_add_14:in2
+  op_add_14:out -> op_add_13:in1
+  cluster_MyFir_io_in -> struct_cluster_MyFir_REG:in
+  cluster_MyFir_result -> op_pad_18:in1
+  struct_cluster_MyFir_REG_1:out -> op_mul_3:in1
+  op_add_10:out -> cluster_MyFir_result
+  
+  
+}
+     
+}

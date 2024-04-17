@@ -1,0 +1,59 @@
+digraph ShiftRegister {
+stylesheet = "styles.css"
+rankdir="LR" 
+
+subgraph cluster_ShiftRegister {
+  label="ShiftRegister"
+  URL=""
+  bgcolor="#FFF8DC"
+  cluster_ShiftRegister_clock [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="clock" rank="0"]
+     
+cluster_ShiftRegister_reset [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="reset" rank="0"]
+     
+cluster_ShiftRegister_io_in [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="io_in" rank="0"]
+     
+cluster_ShiftRegister_io_out_0 [shape = "rectangle" style="filled" fillcolor="#E0FFFF" label="io_out_0" rank="1000"]
+     
+cluster_ShiftRegister_io_out_1 [shape = "rectangle" style="filled" fillcolor="#E0FFFF" label="io_out_1" rank="1000"]
+     
+cluster_ShiftRegister_io_out_2 [shape = "rectangle" style="filled" fillcolor="#E0FFFF" label="io_out_2" rank="1000"]
+     
+cluster_ShiftRegister_io_out_3 [shape = "rectangle" style="filled" fillcolor="#E0FFFF" label="io_out_3" rank="1000"]
+     
+struct_cluster_ShiftRegister_REG [shape="plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#FFE4B5">
+  <TR>
+    <TD PORT="in">&#x25cf;</TD>
+    <TD>REG</TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+struct_cluster_ShiftRegister_REG_1 [shape="plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#FFE4B5">
+  <TR>
+    <TD PORT="in">&#x25cf;</TD>
+    <TD>REG_1</TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+struct_cluster_ShiftRegister_REG_2 [shape="plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#FFE4B5">
+  <TR>
+    <TD PORT="in">&#x25cf;</TD>
+    <TD>REG_2</TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+
+  struct_cluster_ShiftRegister_REG_2:out -> cluster_ShiftRegister_io_out_3
+  cluster_ShiftRegister_io_in -> struct_cluster_ShiftRegister_REG:in
+  cluster_ShiftRegister_io_in -> cluster_ShiftRegister_io_out_0
+  struct_cluster_ShiftRegister_REG:out -> struct_cluster_ShiftRegister_REG_1:in
+  struct_cluster_ShiftRegister_REG_1:out -> cluster_ShiftRegister_io_out_2
+  struct_cluster_ShiftRegister_REG:out -> cluster_ShiftRegister_io_out_1
+  struct_cluster_ShiftRegister_REG_1:out -> struct_cluster_ShiftRegister_REG_2:in
+  
+  
+}
+     
+}

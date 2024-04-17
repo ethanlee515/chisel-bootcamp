@@ -1,0 +1,15 @@
+digraph MovingAverage3_hierarchy { rankdir="TB" 
+ node [shape="rectangle"]; 
+rankdir="LR" 
+stylesheet = "styles.css"
+module_1 [shape= "plaintext" href="MovingAverage3.dot.svg" label=<
+
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" >
+      
+  <TR >
+    <TD BGCOLOR="#FFDEAD" > MovingAverage3 </TD>
+  </TR>
+        
+</TABLE>>];
+
+      }

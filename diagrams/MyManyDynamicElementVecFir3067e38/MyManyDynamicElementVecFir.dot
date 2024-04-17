@@ -1,0 +1,316 @@
+digraph MyManyDynamicElementVecFir {
+stylesheet = "styles.css"
+rankdir="LR" 
+
+subgraph cluster_MyManyDynamicElementVecFir {
+  label="MyManyDynamicElementVecFir"
+  URL=""
+  bgcolor="#FFF8DC"
+  cluster_MyManyDynamicElementVecFir_clock [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="clock" rank="0"]
+     
+cluster_MyManyDynamicElementVecFir_reset [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="reset" rank="0"]
+     
+cluster_MyManyDynamicElementVecFir_io_in [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="io_in" rank="0"]
+     
+cluster_MyManyDynamicElementVecFir_io_valid [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="io_valid" rank="0"]
+     
+cluster_MyManyDynamicElementVecFir_io_consts_0 [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="io_consts_0" rank="0"]
+     
+cluster_MyManyDynamicElementVecFir_io_consts_1 [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="io_consts_1" rank="0"]
+     
+cluster_MyManyDynamicElementVecFir_io_consts_2 [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="io_consts_2" rank="0"]
+     
+cluster_MyManyDynamicElementVecFir_io_consts_3 [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="io_consts_3" rank="0"]
+     
+cluster_MyManyDynamicElementVecFir_io_out [shape = "rectangle" style="filled" fillcolor="#E0FFFF" label="io_out" rank="1000"]
+     
+struct_cluster_MyManyDynamicElementVecFir_taps_1 [shape="plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#FFE4B5">
+  <TR>
+    <TD PORT="in">&#x25cf;</TD>
+    <TD>taps_1</TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+struct_cluster_MyManyDynamicElementVecFir_taps_2 [shape="plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#FFE4B5">
+  <TR>
+    <TD PORT="in">&#x25cf;</TD>
+    <TD>taps_2</TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+struct_cluster_MyManyDynamicElementVecFir_taps_3 [shape="plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#FFE4B5">
+  <TR>
+    <TD PORT="in">&#x25cf;</TD>
+    <TD>taps_3</TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+cluster_MyManyDynamicElementVecFir__T [label = "_T" shape="rectangle"]; 
+
+op_mul_1 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > mul </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_bits_2 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > bits </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD>(7, 0)</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_tail_3 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > tail </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD>1</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_add_4 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > add </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_tail_5 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > tail </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD>1</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_add_6 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > add </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_tail_7 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > tail </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD>1</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_add_8 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > add </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_mul_9 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > mul </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_mul_10 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > mul </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_mul_11 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > mul </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+mux_1868417466 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#AFEEEE">
+  <TR>
+    <TD PORT="in1">0</TD>
+    <TD ROWSPAN="2" PORT="select">a?</TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+mux_1853659045 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#AFEEEE">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" PORT="select">a?</TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+mux_703200375 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#AFEEEE">
+  <TR>
+    <TD PORT="in1">0</TD>
+    <TD ROWSPAN="2" PORT="select">a?</TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+mux_1815213218 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#AFEEEE">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" PORT="select">a?</TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+mux_803137972 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#AFEEEE">
+  <TR>
+    <TD PORT="in1">0</TD>
+    <TD ROWSPAN="2" PORT="select">a?</TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+mux_133522559 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#AFEEEE">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" PORT="select">a?</TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+  mux_803137972:out -> struct_cluster_MyManyDynamicElementVecFir_taps_3:in
+  mux_1868417466:out -> struct_cluster_MyManyDynamicElementVecFir_taps_1:in
+  cluster_MyManyDynamicElementVecFir__T -> op_add_8:in1
+  cluster_MyManyDynamicElementVecFir_io_consts_3 -> op_mul_11:in2
+  cluster_MyManyDynamicElementVecFir_io_valid -> mux_1853659045:select
+  cluster_MyManyDynamicElementVecFir_io_valid -> mux_1815213218:select
+  op_bits_2:out -> cluster_MyManyDynamicElementVecFir_io_out
+  struct_cluster_MyManyDynamicElementVecFir_taps_2:out -> op_mul_10:in1
+  cluster_MyManyDynamicElementVecFir_io_consts_0 -> op_mul_1:in2
+  struct_cluster_MyManyDynamicElementVecFir_taps_1:out -> mux_1853659045:in2
+  cluster_MyManyDynamicElementVecFir_io_valid -> mux_133522559:select
+  op_mul_10:out -> op_add_6:in2
+  struct_cluster_MyManyDynamicElementVecFir_taps_2:out -> mux_1815213218:in2
+  mux_1853659045:out -> mux_1868417466:in2
+  struct_cluster_MyManyDynamicElementVecFir_taps_2:out -> mux_133522559:in1
+  cluster_MyManyDynamicElementVecFir_io_consts_1 -> op_mul_9:in2
+  op_tail_3:out -> op_bits_2:in1
+  op_add_4:out -> op_tail_3:in1
+  op_mul_1:out -> cluster_MyManyDynamicElementVecFir__T
+  cluster_MyManyDynamicElementVecFir_reset -> mux_1868417466:select
+  cluster_MyManyDynamicElementVecFir_reset -> mux_803137972:select
+  op_add_8:out -> op_tail_7:in1
+  struct_cluster_MyManyDynamicElementVecFir_taps_1:out -> mux_1815213218:in1
+  struct_cluster_MyManyDynamicElementVecFir_taps_3:out -> op_mul_11:in1
+  cluster_MyManyDynamicElementVecFir_io_in -> op_mul_1:in1
+  mux_703200375:out -> struct_cluster_MyManyDynamicElementVecFir_taps_2:in
+  cluster_MyManyDynamicElementVecFir_io_in -> mux_1853659045:in1
+  mux_133522559:out -> mux_803137972:in2
+  op_mul_11:out -> op_add_4:in2
+  op_tail_7:out -> op_add_6:in1
+  struct_cluster_MyManyDynamicElementVecFir_taps_1:out -> op_mul_9:in1
+  op_mul_9:out -> op_add_8:in2
+  cluster_MyManyDynamicElementVecFir_reset -> mux_703200375:select
+  cluster_MyManyDynamicElementVecFir_io_consts_2 -> op_mul_10:in2
+  op_add_6:out -> op_tail_5:in1
+  struct_cluster_MyManyDynamicElementVecFir_taps_3:out -> mux_133522559:in2
+  mux_1815213218:out -> mux_703200375:in2
+  op_tail_5:out -> op_add_4:in1
+  
+  
+}
+     
+}

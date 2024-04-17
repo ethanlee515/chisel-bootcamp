@@ -1,0 +1,142 @@
+digraph Neuron2 {
+stylesheet = "styles.css"
+rankdir="LR" 
+
+subgraph cluster_Neuron2 {
+  label="Neuron2"
+  URL=""
+  bgcolor="#FFF8DC"
+  cluster_Neuron2_clock [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="clock" rank="0"]
+     
+cluster_Neuron2_reset [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="reset" rank="0"]
+     
+cluster_Neuron2_io_in_0 [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="io_in_0" rank="0"]
+     
+cluster_Neuron2_io_in_1 [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="io_in_1" rank="0"]
+     
+cluster_Neuron2_io_weights_0 [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="io_weights_0" rank="0"]
+     
+cluster_Neuron2_io_weights_1 [shape = "rectangle" style="filled" fillcolor="#CCCCCC" label="io_weights_1" rank="0"]
+     
+cluster_Neuron2_io_out [shape = "rectangle" style="filled" fillcolor="#E0FFFF" label="io_out" rank="1000"]
+     
+cluster_Neuron2__T [label = "_T" shape="rectangle"]; 
+
+op_mul_1 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > mul </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+cluster_Neuron2_mac [label = "mac" shape="rectangle"]; 
+
+op_asSInt_2 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD > asSInt </TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_tail_3 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > tail </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD>1</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_add_4 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > add </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_mul_5 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > mul </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_pad_6 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD > pad </TD>
+    <TD PORT="out">&#x25cf;</TD>
+  </TR>
+</TABLE>>];
+       
+
+mux_1059515481 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#AFEEEE">
+  <TR>
+    <TD PORT="in1">0</TD>
+    <TD ROWSPAN="2" PORT="select">a?</TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">256</TD>
+  </TR>
+</TABLE>>];
+       
+
+op_lte_7 [shape = "plaintext" label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#D8BFD8">
+  <TR>
+    <TD PORT="in1">&#x25cf;</TD>
+    <TD ROWSPAN="2" > lte </TD>
+    <TD ROWSPAN="2" PORT="out">&#x25cf;</TD>
+  </TR>
+  <TR>
+    <TD PORT="in2">0</TD>
+  </TR>
+</TABLE>>];
+       
+
+  op_mul_1:out -> cluster_Neuron2__T
+  cluster_Neuron2_io_weights_0 -> op_mul_1:in2
+  cluster_Neuron2_io_weights_1 -> op_mul_5:in2
+  op_tail_3:out -> op_asSInt_2:in1
+  op_add_4:out -> op_tail_3:in1
+  cluster_Neuron2_io_in_0 -> op_mul_1:in1
+  op_asSInt_2:out -> cluster_Neuron2_mac
+  cluster_Neuron2_io_in_1 -> op_mul_5:in1
+  op_mul_5:out -> op_add_4:in2
+  op_pad_6:out -> cluster_Neuron2_io_out
+  cluster_Neuron2_mac -> op_lte_7:in1
+  mux_1059515481:out -> op_pad_6:in1
+  cluster_Neuron2__T -> op_add_4:in1
+  op_lte_7:out -> mux_1059515481:select
+  
+  
+}
+     
+}
